@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Poster 01 Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Poster</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       width: 100%;
+      height: 100%;
       background-color: #000;
       overflow: hidden;
     }
@@ -17,13 +18,17 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: 1;
-      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
